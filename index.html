@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <div class="header-top">
+          <h1>To-Do App</h1>
+          <div class="header-controls">
+            <button
+              id="theme-toggle"
+              class="btn icon"
+              aria-label="Toggle theme"
+              title="Toggle theme"
+            >
+              🌙
+            </button>
+          </div>
+        </div>
+        <p class="subtitle">Simple and Fast</p>
+      </header>
+
+      <section class="controls">
+        <form id="add-form" class="add-form" autocomplete="off">
+          <input
+            id="new-task"
+            type="text"
+            placeholder="Add a new task and press Enter"
+            aria-label="New task"
+          />
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+
+        <div class="actions">
+          <input
+            id="search"
+            type="search"
+            placeholder="Search tasks"
+            aria-label="Search tasks"
+          />
+          <select id="filter">
+            <option value="all">All</option>
+            <option value="active">Active</option>
+            <option value="completed">Completed</option>
+          </select>
+          <button id="clear-completed" class="btn">Clear completed</button>
+        </div>
+      </section>
+
+      <section class="list-section">
+        <ul id="task-list" class="task-list" aria-live="polite"></ul>
+        <p id="empty" class="empty">No tasks yet — add one above.</p>
+      </section>
+
+      <footer class="footer"><span id="count">0</span> items left</footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
